@@ -40,8 +40,8 @@ try {
     <div>
         <!-- Edit Product Form (If edit query parameter is active) -->
         <?php if ($edit_product): ?>
-            <div class="panel" style="border-color: var(--accent-cyan);">
-                <h3 class="panel-title" style="color: var(--accent-cyan);">
+            <div class="panel" style="border-color: var(--accent-primary);">
+                <h3 class="panel-title" style="color: var(--accent-primary);">
                     <i class="fa-solid fa-pen-to-square"></i> Edit <span>Produk</span>
                 </h3>
                 <form action="../../process/admin_action.php?action=edit_product" method="POST">
@@ -156,7 +156,7 @@ try {
     <!-- RIGHT COLUMN: Products List -->
     <div class="panel">
         <h3 class="panel-title">
-            <i class="fa-solid fa-boxes-stacked" style="color: var(--accent-cyan);"></i> Daftar <span>Seluruh Produk (LEFT JOIN)</span>
+            <i class="fa-solid fa-boxes-stacked" style="color: var(--accent-primary);"></i> Daftar <span>Seluruh Produk (LEFT JOIN)</span>
         </h3>
 
         <?php if (empty($products)): ?>
@@ -184,7 +184,7 @@ try {
                                 <td style="text-align: center;"><?= $prod['stok'] ?></td>
                                 <td style="text-align: center;">
                                     <div style="display: flex; gap: 0.25rem; justify-content: center;">
-                                        <a href="products.php?edit=<?= $prod['id_produk'] ?>" class="btn btn-outline" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; border-radius: 4px; border-color: var(--accent-cyan); color: var(--accent-cyan);">
+                                        <a href="products.php?edit=<?= $prod['id_produk'] ?>" class="btn btn-outline" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; border-radius: 4px; border-color: var(--accent-primary); color: var(--accent-primary);">
                                             <i class="fa-solid fa-pen"></i> Edit
                                         </a>
                                         <a href="../../process/admin_action.php?action=delete_product&id_produk=<?= $prod['id_produk'] ?>" class="btn btn-danger" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; border-radius: 4px;" onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?')">

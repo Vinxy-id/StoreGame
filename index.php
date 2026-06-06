@@ -30,21 +30,37 @@ try {
 ?>
 
 <div class="hero">
-    <h1>Top Up Game Tercepat & <span>Terpercaya</span></h1>
-    <p>Penuhi kebutuhan game favoritmu mulai dari Diamond, Voucher, hingga Crystals dengan harga termurah dan proses otomatis 24/7.</p>
-    
-    <!-- Search Bar -->
-    <form action="" method="GET" style="max-width: 500px; margin: 0 auto; display: flex; gap: 0.5rem;">
-        <input type="text" name="search" class="form-input" placeholder="Cari game favorit Anda..." value="<?= htmlspecialchars($search) ?>" style="border-radius: 50px;">
-        <button type="submit" class="btn btn-primary" style="border-radius: 50px; padding: 0.5rem 1.5rem;">
-            <i class="fa-solid fa-magnifying-glass"></i> Cari
-        </button>
-    </form>
+    <div class="hero-content">
+        <h1>An online Marketplace for <span>Buyer and Seller</span></h1>
+        <p>Penuhi kebutuhan game favoritmu mulai dari Diamond, Voucher, hingga Crystals dengan harga termurah dan proses otomatis 24/7.</p>
+        
+        <!-- Search Bar -->
+        <form action="" method="GET" style="display: flex; gap: 0.5rem; margin-top: 1.5rem;">
+            <input type="text" name="search" class="form-input" placeholder="Cari game favorit Anda..." value="<?= htmlspecialchars($search) ?>" style="border-radius: 50px;">
+            <button type="submit" class="btn btn-primary" style="border-radius: 50px; padding: 0.5rem 1.5rem;">
+                <i class="fa-solid fa-magnifying-glass"></i> Cari
+            </button>
+        </form>
+    </div>
+    <div class="hero-image">
+        <!-- Placeholder for hero image -->
+        <i class="fa-solid fa-gamepad" style="font-size: 10rem; color: var(--accent-primary);"></i>
+    </div>
+</div>
+
+<!-- Marquee Strip -->
+<div class="marquee-container">
+    <div class="marquee-content">
+        <span>Top-Up</span><span>✳</span><span>Voucher</span><span>✳</span><span>Gift Card</span><span>✳</span>
+        <span>Top-Up</span><span>✳</span><span>Voucher</span><span>✳</span><span>Gift Card</span><span>✳</span>
+        <span>Top-Up</span><span>✳</span><span>Voucher</span><span>✳</span><span>Gift Card</span><span>✳</span>
+        <span>Top-Up</span><span>✳</span><span>Voucher</span><span>✳</span><span>Gift Card</span><span>✳</span>
+    </div>
 </div>
 
 <div class="panel">
     <h2 class="panel-title">
-        <i class="fa-solid fa-fire" style="color: var(--accent-cyan);"></i> Daftar <span>Game Populer</span>
+        <i class="fa-solid fa-fire" style="color: var(--accent-primary);"></i> Daftar <span>Game Populer</span>
     </h2>
     
     <?php if (empty($games)): ?>
@@ -53,10 +69,9 @@ try {
         <div class="game-grid">
             <?php foreach ($games as $game): ?>
                 <div class="game-card">
-                    <!-- We'll simulate game images with Font Awesome icons or colors if images are missing, but let's make it look premium -->
-                    <div style="height: 180px; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom: 1px solid var(--glass-border); position: relative;">
-                        <i class="fa-solid fa-gamepad" style="font-size: 4rem; color: var(--accent-purple); opacity: 0.3;"></i>
-                        <span style="position: absolute; bottom: 10px; right: 10px; font-size: 0.75rem; background: rgba(0, 255, 255, 0.1); color: var(--accent-cyan); padding: 2px 8px; border-radius: 20px; border: 1px solid rgba(0, 255, 255, 0.2);">
+                    <div style="height: 180px; position: relative; overflow: hidden; border-bottom: 1px solid var(--glass-border);">
+                        <img src="<?= $base_url ?>assets/img/games/<?= htmlspecialchars($game['logo'] ?? 'default_game.png') ?>" alt="<?= htmlspecialchars($game['nama_game']) ?>" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition);">
+                        <span style="position: absolute; bottom: 10px; right: 10px; font-size: 0.75rem; background: rgba(11, 26, 20, 0.8); color: var(--accent-primary); padding: 2px 8px; border-radius: 20px; border: 1px solid var(--glass-border); backdrop-filter: blur(4px);">
                             <?= $game['total_produk'] ?> Item
                         </span>
                     </div>

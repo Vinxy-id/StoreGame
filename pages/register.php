@@ -11,7 +11,7 @@ if (isset($_SESSION['user'])) {
 <div class="auth-container" style="max-width: 500px;">
     <div class="panel">
         <h2 class="panel-title" style="justify-content: center;">
-            <i class="fa-solid fa-user-plus" style="color: var(--accent-cyan);"></i> Daftar Akun <span>Baru</span>
+            <i class="fa-solid fa-user-plus" style="color: var(--accent-primary);"></i> Daftar Akun <span>Baru</span>
         </h2>
         <form action="../process/auth.php?action=register" method="POST">
             <div class="form-group">
@@ -45,7 +45,7 @@ if (isset($_SESSION['user'])) {
         </form>
         
         <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
-            Sudah punya akun? <a href="login.php" style="color: var(--accent-cyan); font-weight: 600;">Login Disini</a>
+            Sudah punya akun? <a href="login.php" style="color: var(--accent-primary); font-weight: 600;">Login Disini</a>
         </p>
     </div>
 </div>

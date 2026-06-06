@@ -54,14 +54,14 @@ try {
     <!-- Left Column: Checkout Summary -->
     <div class="panel">
         <h3 class="panel-title">
-            <i class="fa-solid fa-file-invoice" style="color: var(--accent-cyan);"></i> Ringkasan <span>Pesanan</span>
+            <i class="fa-solid fa-file-invoice" style="color: var(--accent-primary);"></i> Ringkasan <span>Pesanan</span>
         </h3>
         
         <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
             <?php foreach ($cart_details as $item): ?>
                 <div style="background: var(--bg-secondary); border: 1px solid var(--glass-border); padding: 1rem; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
                     <div>
-                        <strong style="color: var(--accent-cyan);"><?= htmlspecialchars($item['nama_game']) ?></strong>
+                        <strong style="color: var(--accent-primary);"><?= htmlspecialchars($item['nama_game']) ?></strong>
                         <div style="font-size: 0.95rem; margin-top: 0.25rem;">
                             <?= htmlspecialchars($item['nama_produk']) ?> &times; <?= $item['qty'] ?>
                         </div>
@@ -81,7 +81,7 @@ try {
 
         <div style="border-top: 1px solid var(--glass-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
             <span style="color: var(--text-secondary); font-size: 1.1rem;">Total Tagihan:</span>
-            <strong style="font-size: 1.6rem; color: var(--accent-cyan);">Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
+            <strong style="font-size: 1.6rem; color: var(--accent-primary);">Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
         </div>
     </div>
 
@@ -90,14 +90,14 @@ try {
         <form action="../process/order.php" method="POST">
             <div class="panel">
                 <h3 class="panel-title">
-                    <i class="fa-solid fa-credit-card" style="color: var(--accent-cyan);"></i> Pilih Metode <span>Pembayaran</span>
+                    <i class="fa-solid fa-credit-card" style="color: var(--accent-primary);"></i> Pilih Metode <span>Pembayaran</span>
                 </h3>
                 
                 <div class="payment-grid" style="margin-bottom: 2rem;">
                     <!-- QRIS -->
                     <div class="payment-item active">
                         <input type="radio" name="metode_pembayaran" value="QRIS" checked required>
-                        <i class="fa-solid fa-qrcode" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-cyan);"></i>
+                        <i class="fa-solid fa-qrcode" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-primary);"></i>
                         <div>QRIS (E-Wallet)</div>
                     </div>
                     
@@ -118,13 +118,13 @@ try {
                     <!-- Transfer Bank -->
                     <div class="payment-item">
                         <input type="radio" name="metode_pembayaran" value="Transfer Bank" required>
-                        <i class="fa-solid fa-building-columns" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-purple);"></i>
+                        <i class="fa-solid fa-building-columns" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent-primary);"></i>
                         <div>Transfer Bank</div>
                     </div>
                 </div>
 
                 <div style="background: rgba(138, 43, 226, 0.05); border: 1px solid var(--accent-purple-glow); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
-                    <i class="fa-solid fa-circle-info" style="color: var(--accent-purple);"></i> 
+                    <i class="fa-solid fa-circle-info" style="color: var(--accent-primary);"></i> 
                     Pembayaran ini bersifat <strong>simulasi</strong> untuk keperluan praktikum. Setelah Anda menekan tombol "Bayar Sekarang", transaksi akan berstatus <strong>Pending</strong>. Masuk ke halaman admin untuk menyetujui transaksi ini agar stok produk berkurang.
                 </div>
 

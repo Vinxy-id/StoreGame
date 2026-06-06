@@ -29,8 +29,8 @@ try {
 <div class="product-layout">
     <!-- Sidebar: Game Info -->
     <div class="product-sidebar">
-        <div style="width: 100%; height: 180px; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary)); display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: var(--radius-sm); border: 1px solid var(--glass-border); margin-bottom: 1.5rem;">
-            <i class="fa-solid fa-gamepad" style="font-size: 5rem; color: var(--accent-purple); opacity: 0.3;"></i>
+        <div style="width: 100%; height: 180px; border-radius: var(--radius-sm); border: 1px solid var(--glass-border); margin-bottom: 1.5rem; overflow: hidden;">
+            <img src="<?= $base_url ?>assets/img/games/<?= htmlspecialchars($game['logo'] ?? 'default_game.png') ?>" alt="<?= htmlspecialchars($game['nama_game']) ?>" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="game-publisher" style="font-size: 0.9rem; letter-spacing: 2px;"><?= htmlspecialchars($game['publisher']) ?></div>
         <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;"><?= htmlspecialchars($game['nama_game']) ?></h2>

@@ -42,7 +42,7 @@ if (!empty($cart)) {
 
 <div class="panel">
     <h2 class="panel-title">
-        <i class="fa-solid fa-cart-shopping" style="color: var(--accent-cyan);"></i> Keranjang <span>Belanja</span>
+        <i class="fa-solid fa-cart-shopping" style="color: var(--accent-primary);"></i> Keranjang <span>Belanja</span>
     </h2>
 
     <?php if (empty($cart_details)): ?>
@@ -78,7 +78,7 @@ if (!empty($cart)) {
                             </td>
                             <td>Rp <?= number_format($item['harga'], 0, ',', '.') ?></td>
                             <td><?= htmlspecialchars($item['qty']) ?></td>
-                            <td style="color: var(--accent-cyan); font-weight: 600;">Rp <?= number_format($item['subtotal'], 0, ',', '.') ?></td>
+                            <td style="color: var(--accent-primary); font-weight: 600;">Rp <?= number_format($item['subtotal'], 0, ',', '.') ?></td>
                             <td style="text-align: center;">
                                 <a href="../process/cart_action.php?action=remove&index=<?= $item['index'] ?>" class="btn btn-danger" style="padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.85rem;">
                                     <i class="fa-solid fa-trash-can"></i> Hapus
@@ -98,7 +98,7 @@ if (!empty($cart)) {
             <div style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 1rem;">
                 <div>
                     <span style="color: var(--text-secondary); font-size: 1.1rem; margin-right: 1rem;">Total Pembayaran:</span>
-                    <strong style="font-size: 1.8rem; color: var(--accent-cyan);">Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
+                    <strong style="font-size: 1.8rem; color: var(--accent-primary);">Rp <?= number_format($total_harga, 0, ',', '.') ?></strong>
                 </div>
 
                 <div>

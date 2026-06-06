@@ -53,7 +53,7 @@ try {
 
 <div class="panel">
     <h2 class="panel-title">
-        <i class="fa-solid fa-list-check" style="color: var(--accent-cyan);"></i> Kelola <span>Seluruh Transaksi Masuk</span>
+        <i class="fa-solid fa-list-check" style="color: var(--accent-primary);"></i> Kelola <span>Seluruh Transaksi Masuk</span>
     </h2>
     <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
         Sebagai admin, Anda dapat memantau pembayaran dan mengubah status transaksi dari **Pending** menjadi **Sukses** atau **Gagal** (memicu trigger pengembalian stok jika gagal).
@@ -67,7 +67,7 @@ try {
                 <div style="background: var(--bg-secondary); border: 1px solid <?= ($tx['status'] === 'pending') ? 'var(--accent-purple-glow)' : 'var(--glass-border)' ?>; border-radius: var(--radius-md); padding: 1.5rem; position: relative;">
                     
                     <?php if ($tx['status'] === 'pending'): ?>
-                        <div style="position: absolute; top: -1px; left: 20px; background: var(--accent-purple); color: white; padding: 2px 10px; font-size: 0.75rem; font-weight: bold; border-radius: 0 0 8px 8px; text-transform: uppercase;">
+                        <div style="position: absolute; top: -1px; left: 20px; background: var(--accent-primary); color: white; padding: 2px 10px; font-size: 0.75rem; font-weight: bold; border-radius: 0 0 8px 8px; text-transform: uppercase;">
                             Menunggu Konfirmasi
                         </div>
                     <?php endif; ?>
@@ -76,7 +76,7 @@ try {
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 1rem; margin-bottom: 1rem; margin-top: 0.5rem;">
                         <div>
                             <span style="color: var(--text-muted); font-size: 0.85rem;">Pelanggan</span>
-                            <div style="font-weight: 600; font-size: 0.95rem; margin-top: 0.25rem; color: var(--accent-cyan);">
+                            <div style="font-weight: 600; font-size: 0.95rem; margin-top: 0.25rem; color: var(--accent-primary);">
                                 <?= htmlspecialchars($tx['username']) ?>
                             </div>
                             <span style="font-size: 0.75rem; color: var(--text-muted);"><?= htmlspecialchars($tx['email']) ?></span>
@@ -121,7 +121,7 @@ try {
                     <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1rem; flex-wrap: wrap; gap: 1rem;">
                         <div>
                             <span style="color: var(--text-secondary); font-weight: 600;">Total Belanja:</span>
-                            <strong style="color: var(--accent-cyan); font-size: 1.3rem; margin-left: 0.5rem;">Rp <?= number_format($tx['total'], 0, ',', '.') ?></strong>
+                            <strong style="color: var(--accent-primary); font-size: 1.3rem; margin-left: 0.5rem;">Rp <?= number_format($tx['total'], 0, ',', '.') ?></strong>
                         </div>
                         
                         <!-- Actions for Pending status -->

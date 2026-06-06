@@ -17,7 +17,7 @@ $base_url = $protocol . '://' . $host . $base_dir;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TopUpin - Store Top Up Game Terpercaya</title>
+    <title>Gammy - Store Top Up Game Terpercaya</title>
     <link rel="stylesheet" href="<?= $base_url ?>assets/css/style.css">
     <!-- Font Awesome for Modern Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,7 +26,7 @@ $base_url = $protocol . '://' . $host . $base_dir;
 <header>
     <div class="nav-container">
         <a href="<?= $base_url ?>" class="logo">
-            <i class="fa-solid fa-gamepad" style="color: var(--accent-cyan);"></i> TopUpin
+            <i class="fa-solid fa-gamepad" style="color: var(--accent-primary);"></i> Gammy
         </a>
         <ul class="nav-links">
             <li>
@@ -80,7 +80,7 @@ $base_url = $protocol . '://' . $host . $base_dir;
             <?php if (isset($_SESSION['user'])): ?>
                 <div style="display: flex; align-items: center; gap: 1rem;">
                     <span style="color: var(--text-secondary); font-size: 0.9rem;">
-                        Hi, <strong style="color: var(--accent-cyan);"><?= htmlspecialchars($_SESSION['user']['username']) ?></strong>
+                        Hi, <strong style="color: var(--accent-primary);"><?= htmlspecialchars($_SESSION['user']['username']) ?></strong>
                     </span>
                     <a href="<?= $base_url ?>process/auth.php?action=logout" class="btn btn-danger" style="padding: 0.5rem 1.25rem; border-radius: 50px;">
                         <i class="fa-solid fa-right-from-bracket"></i> Logout

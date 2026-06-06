@@ -71,7 +71,7 @@ try {
 
 <div class="panel" style="margin-bottom: 2rem;">
     <h2 class="panel-title">
-        <i class="fa-solid fa-gauge-high" style="color: var(--accent-cyan);"></i> Dashboard <span>Admin (Statistik & Laporan)</span>
+        <i class="fa-solid fa-gauge-high" style="color: var(--accent-primary);"></i> Dashboard <span>Admin (Statistik & Laporan)</span>
     </h2>
     <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
         Halaman ini menampilkan visualisasi ringkas data transaksi menggunakan **Fungsi Agregasi (SUM, COUNT, AVG, MAX, GROUP BY, HAVING)** sebagai pemenuhan materi praktikum.
@@ -109,7 +109,7 @@ try {
     <!-- Top Products Panel -->
     <div class="panel">
         <h3 class="panel-title">
-            <i class="fa-solid fa-fire-flame-curved" style="color: var(--accent-cyan);"></i> 5 Produk <span>Terlaris (GROUP BY)</span>
+            <i class="fa-solid fa-fire-flame-curved" style="color: var(--accent-primary);"></i> 5 Produk <span>Terlaris (GROUP BY)</span>
         </h3>
         
         <?php if (empty($top_products)): ?>
@@ -129,7 +129,7 @@ try {
                             <tr>
                                 <td><strong><?= htmlspecialchars($prod['nama_game']) ?></strong></td>
                                 <td><?= htmlspecialchars($prod['nama_produk']) ?></td>
-                                <td style="text-align: right; color: var(--accent-cyan); font-weight: 600;"><?= $prod['total_terjual'] ?>x</td>
+                                <td style="text-align: right; color: var(--accent-primary); font-weight: 600;"><?= $prod['total_terjual'] ?>x</td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -141,7 +141,7 @@ try {
     <!-- Payment Stats Panel -->
     <div class="panel">
         <h3 class="panel-title">
-            <i class="fa-solid fa-credit-card" style="color: var(--accent-cyan);"></i> Transaksi Per <span>Metode Pembayaran</span>
+            <i class="fa-solid fa-credit-card" style="color: var(--accent-primary);"></i> Transaksi Per <span>Metode Pembayaran</span>
         </h3>
         
         <?php if (empty($metode_stats)): ?>
@@ -174,7 +174,7 @@ try {
 <!-- HAVING Panel -->
 <div class="panel">
     <h3 class="panel-title">
-        <i class="fa-solid fa-filter-list" style="color: var(--accent-cyan);"></i> Produk dengan Pendapatan &ge; Rp 40.000 <span>(GROUP BY + HAVING)</span>
+        <i class="fa-solid fa-filter-list" style="color: var(--accent-primary);"></i> Produk dengan Pendapatan &ge; Rp 40.000 <span>(GROUP BY + HAVING)</span>
     </h3>
     
     <?php if (empty($having_products)): ?>
@@ -194,7 +194,7 @@ try {
                         <tr>
                             <td><strong><?= htmlspecialchars($prod['nama_game']) ?></strong></td>
                             <td><?= htmlspecialchars($prod['nama_produk']) ?></td>
-                            <td style="text-align: right; color: var(--accent-cyan); font-weight: 600;">Rp <?= number_format($prod['total_pendapatan'], 0, ',', '.') ?></td>
+                            <td style="text-align: right; color: var(--accent-primary); font-weight: 600;">Rp <?= number_format($prod['total_pendapatan'], 0, ',', '.') ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

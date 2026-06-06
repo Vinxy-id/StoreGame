@@ -54,7 +54,7 @@ try {
 
 <div class="panel">
     <h2 class="panel-title">
-        <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-cyan);"></i> Riwayat <span>Transaksi Anda</span>
+        <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-primary);"></i> Riwayat <span>Transaksi Anda</span>
     </h2>
 
     <?php if (empty($transactions)): ?>
@@ -83,7 +83,7 @@ try {
                         </div>
                         <div>
                             <span style="color: var(--text-muted); font-size: 0.85rem;">Metode</span>
-                            <div style="font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; color: var(--accent-cyan);">
+                            <div style="font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; color: var(--accent-primary);">
                                 <?= htmlspecialchars($tx['metode_pembayaran']) ?>
                             </div>
                         </div>
@@ -110,7 +110,7 @@ try {
                     <!-- Footer of Transaction Block -->
                     <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1rem; font-weight: 700;">
                         <span style="color: var(--text-secondary);">Total Belanja:</span>
-                        <span style="color: var(--accent-cyan); font-size: 1.25rem;">Rp <?= number_format($tx['total'], 0, ',', '.') ?></span>
+                        <span style="color: var(--accent-primary); font-size: 1.25rem;">Rp <?= number_format($tx['total'], 0, ',', '.') ?></span>
                     </div>
                 </div>
             <?php endforeach; ?>

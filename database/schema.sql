@@ -120,10 +120,10 @@ INSERT INTO users (id_user, username, password, email, no_hp, role) VALUES
 
 -- Games
 INSERT INTO games (id_game, nama_game, publisher, logo) VALUES
-(1, 'Mobile Legends', 'Moonton', 'mlbb.png'),
-(2, 'Free Fire', 'Garena', 'ff.png'),
-(3, 'PUBG Mobile', 'Tencent', 'pubg.png'),
-(4, 'Genshin Impact', 'Hoyoverse', 'genshin.png');
+(1, 'Mobile Legends', 'Moonton', 'ml.jpg'),
+(2, 'Free Fire', 'Garena', 'ff.jpg'),
+(3, 'PUBG Mobile', 'Tencent', 'pubg.jpg'),
+(4, 'Genshin Impact', 'Hoyoverse', 'genshin.jpg');
 
 -- Products
 INSERT INTO products (id_game, nama_produk, nominal, harga, stok) VALUES
